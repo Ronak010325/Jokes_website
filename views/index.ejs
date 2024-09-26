@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link href="styles/form.css" rel="styleSheet">
+</head>
+<body background="images/background.png">
+    <div class="container">
+
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M12.331 9.5a1 1 0 0 1 0 1A5 5 0 0 1 8 13a5 5 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5M7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5"/>
+            </svg>
+          Welcome to Jokes Website
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-laughing-fill" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5c0 .501-.164.396-.415.235C6.42 6.629 6.218 6.5 6 6.5s-.42.13-.585.235C5.164 6.896 5 7 5 6.5 5 5.672 5.448 5 6 5s1 .672 1 1.5m5.331 3a1 1 0 0 1 0 1A5 5 0 0 1 8 13a5 5 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5m-1.746-2.765C10.42 6.629 10.218 6.5 10 6.5s-.42.13-.585.235C9.164 6.896 9 7 9 6.5c0-.828.448-1.5 1-1.5s1 .672 1 1.5c0 .501-.164.396-.415.235"/>
+          </svg>
+        </h1>
+        <form action="/submit" method="POST">
+            <div class="question">
+                <label>Select Category / Categories: </label>
+            </div>
+            <div class="answer">
+                <input type="radio" class="radio" value="Any" name="Category" id="any" checked>Any<br>
+                <input type="radio" class="radio" value="Custom" name="Category" id="custom">Custom
+                <input class="custom_list" type="checkbox" name="custom" value="Programming" disabled>Programming
+                <input class="custom_list" type="checkbox" name="custom" value="Miscellaneous" disabled>Misc
+                <input class="custom_list" type="checkbox" name="custom" value="Dark" disabled>Dark
+                <input class="custom_list" type="checkbox" name="custom" value="Pun" disabled>Pun
+                <input class="custom_list" type="checkbox" name="custom" value="Spooky" disabled>Spooky
+                <input class="custom_list" type="checkbox" name="custom" value="Christmas" disabled>Christmas
+            </div>
+            
+            <div class="question">
+                <label>Select Language: </label>
+            </div>
+            <div class="answer">
+                <select name="lang">
+                        <option value="cs">cs - Czech</option>
+                        <option value="de">de - German</option>
+                        <option value="en">en - English</option>
+                        <option value="es">es - Spanish</option>
+                    </select>
+            </div>
+
+            <div class="question">
+                <label>Select what type of jokes you don't want: </label>
+            </div>
+            <div class="answer">
+                    (optional)
+                    <label>
+                        <input type="checkbox" name="options" value="nsfw">nsfw
+                    </label>
+                    <label>
+                        <input type="checkbox" name="options" value="explicit">explicit
+                    </label>
+                    <label>
+                        <input type="checkbox" name="options" value="sexist">sexist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="options" value="political">political
+                    </label>
+                    <label>
+                        <input type="checkbox" name="options" value="racist">racist
+                    </label>
+                    <label>
+                        <input type="checkbox" name="options" value="religious">religious
+                    </label>
+            </div>
+
+            <div class="question">
+                <label>Amount of Jokes: </label>
+            </div>
+            <div class="answer">
+                <input type="number" name="amount" id="amount" min="1" max="10" value="1">
+            </div>
+
+            <div class="sub">
+                <input type="submit" class="submit"> 
+            </div>
+    </form>
+    <% if (locals.error) { %>
+        <div class="error">
+            <%= error %>
+        </div>
+    <% } %>
+</div>
+    <script>
+        const custom_button = document.getElementById("custom");
+        const any_button = document.getElementById("any");
+        custom_button.addEventListener("click" , ()=> {
+            const custom_list = document.querySelectorAll(".custom_list");
+            custom_list.forEach(element => {
+                element.removeAttribute("disabled");
+            });
+        })
+        any_button.addEventListener("click" , ()=> {
+            const custom_list = document.querySelectorAll(".custom_list");
+            custom_list.forEach(element => {
+                element.setAttribute("disabled",true);
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+h1{
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    color: #2a2a30;
+}
+
+svg {
+    height: 30px;
+    width: 30px;
+}
+
+form {
+    border: 5px double black;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows:1fr 0.5fr 0.5fr 0.5fr 0.5fr; 
+    gap: 10px;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.answer {
+    text-align: left;
+    font-size: 1.3rem;
+    border: 2px dashed black;
+    border-radius: 10px;
+    color:#2a2a30;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.answer label {
+    font-size: 1.3rem;
+    padding: 0;
+}
+
+.sub {
+    grid-column: span 2;
+    text-align: left;
+    height: 60px;
+}
+
+.sub input {
+    height: 100%;
+    width: fit-content;
+    padding: 10px 15px;
+    border:3px dotted yellow;
+    border-radius: 10px;
+    background-color: #2a2a30;
+    color: #ebc84b;
+    font-size: 1.3rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+}
+
+.sub input:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+form * {
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+.question label {
+    font-size: 1.5rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #2a2a30;
+}
+
+.question {
+    padding-right: 0px ;
+    width: fit-content;
+
+}
+
+select {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #2a2a30;
+    color: #ebc84b;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.3rem;
+    height: 100%;
+    outline: 0;
+}
+
+#amount {
+    border: 1px solid black;
+    border-radius:5px;
+    background-color: #2a2a30;
+    color: #ebc84b;
+    font-size: 1.3rem;
+    outline: 0;
+}
+
+.container {
+    background-color: #ebc84bed;
+    border: 4px dashed #2a2a30;
+    border-radius: 10px;
+    padding: 10px;
+    height: 70%;
+}
+
+input[type="radio"] {
+    accent-color:#2a2a30; /* Change to your desired color */
+}
+
+input[type="checkbox"] {
+    accent-color:#2a2a30;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    appearance: textfield;
+}
+  
+.error{
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 4px double black;
+    border-radius: 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}

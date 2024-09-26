@@ -1,0 +1,78 @@
+body{
+    height: 100%;
+    
+}
+
+.container > a {
+    text-decoration: none;
+}
+
+h1{
+    margin: 5px 0;
+    text-align: center;
+    color: #ebc84b;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+h1:hover{
+    color: #e4cc76;
+}
+
+svg{
+    height: 30px;
+    width: 30px;
+}
+
+.container{
+    height: 100%;
+    background-color: #2a2a30ed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 4px dashed #ebc84b;
+    border-radius: 10px;
+}
+
+.joke {
+    background-color: #ebc84bd4;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 5px double #2a2a30;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: #2a2a30;
+    cursor: default;
+}
+
+.joke:hover{
+    background-color: #e6c85e;
+    color: black;
+}
+
+.joke div {
+    font-family: "Gowun Batang", serif;
+    font-weight: 520;
+}
+
+a {
+    text-align: center;
+}
+
+a button {
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: 4px double yellow;
+    background-color: #2a2a30a1;
+    color: #ebc84b;
+    text-align: center;
+}
+
+a button:hover{
+    background-color: #ebc84b;
+    border: 4px double #2a2a30;
+    color:#2a2a30;
+}
