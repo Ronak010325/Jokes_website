@@ -8,3 +8,4 @@ Step 6 : Intall all the Node packages (cd : npm i)<br>
 Step 7 : Start the Server (cd : node index.js)<br>
 Step 8 : Open Google chrome and search for ("http://localhost:3000/")<br>
 There you go enjoy your Jokes !!
+To stop Server use (cd : Ctrl + C)
