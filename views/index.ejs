@@ -17,8 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link href="styles/form.css" rel="styleSheet">
+    <link href="styles/footer.css" rel="styleSheet">
 </head>
 <body background="images/background.png">
+    <div class="wrapper">
+        <main>
     <div class="container">
 
         <h1><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
@@ -98,7 +101,9 @@
             <%= error %>
         </div>
     <% } %>
-</div>
+    </div>
+</main>
+    <%- include("partials/footer.ejs") %>
     <script>
         const custom_button = document.getElementById("custom");
         const any_button = document.getElementById("any");
@@ -115,5 +120,6 @@
             });
         })
     </script>
+    </div>
 </body>
 </html>

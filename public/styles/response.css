@@ -1,6 +1,19 @@
-body{
+html, body {
+    margin: 0;
+    padding: 0;
     height: 100%;
-    
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    padding: 10px 10px 0 10px;
 }
 
 .container > a {
